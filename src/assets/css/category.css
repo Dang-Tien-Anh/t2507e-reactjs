@@ -1,0 +1,174 @@
+a {
+    text-decoration: none;
+    /* bỏ gạch chân của thẻ a */
+    color: #444444;
+}
+
+h1 {
+    font-size: 65px;
+    font-weight: 100;
+    /* độ đậm của chữ */
+}
+
+h2 {
+    font-size: 55px;
+    font-weight: 100;
+    /* độ đậm của chữ */
+}
+
+h3 {
+    font-size: 45px;
+    font-weight: 200;
+    /* độ đậm của chữ */
+}
+
+
+body {
+    font-family: "Cormorant Garamond", sans-serif;
+    background-color: #fafafa;
+    /* màu nền của trang web */
+    font-size: 22px;
+    /* kích thước chữ */
+    font-weight: 100;
+    /* độ đậm của chữ */
+    color: #444444;
+    /* màu chữ */
+    text-align: left;
+    /* canh trái, phải, giữa */
+    padding: 0px 20px;
+    /* khoảng cách giữa viền và nội dung của thẻ body, đều tự thêm so với hướng dẫn của thầy vì thấy đẹp hơn*/
+    line-height: 1.5;
+    /* khoảng cách giữa các dòng  1.5 * 15px = 22.5px, tự thêm so với hướng dẫn của thầy*/
+}
+
+p {
+    margin-bottom: 0.75 rem;
+    /* khoảng cách giữa các đoạn văn */
+}
+
+.section {
+    float: left;
+    /* cho phép các thẻ div đứng cạnh nhau: right */
+    width: 100%;
+    /* chiều rộng của thẻ section */
+}
+
+.container {
+    /*tạo 1 hộp nội dung giữa các section */
+    float: none;
+    margin: 0 auto;
+    width: 1360px;
+    /* chiều rộng của thẻ container */
+}
+
+img {
+    max-width: 100%;
+    /* cỡ hình ảnh về kích thước của thẻ cha nếu nó vượt quá*/
+}
+
+.breadcrumb ul {
+    list-style: none;
+    padding: 15px 0px 60px 0px;
+    margin: 0;
+    display: flex;
+    /* để các phần nằm ngang */
+    gap: 5px;
+    /* khoảng cách giữa phần tử */
+}
+
+
+.breadcrumb li+li::before {
+    content: " / ";
+    /* cái dấu “/” giữa các phần */
+    margin: 0 5px;
+}
+
+button {
+    font-family: "Cormorant Garamond", sans-serif;
+    color: #444444;
+    width: 180px;
+    height: 60px;
+    border-radius: none;
+    font-size: 22px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #E9F0E9;
+    background-color: #E9F0E9;
+}
+
+.Featured {
+    padding: 0px 0px 30px 0px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* cột trái 1 phần, cột phải 3 phần */
+    gap: 20px;
+    /* khoảng cách giữa 2 cột */
+    padding: 30px 0px 50px 0px;
+}
+
+.list-left img,
+.list-right img {
+    max-width: 100%;
+    height: auto;
+    /* để ảnh tự co giãn giữ tỉ lệ */
+    display: block;
+    /* tránh khoảng trống dưới ảnh */
+}
+
+.list ul li {
+    list-style: none;
+}
+
+.left-over {
+    padding: 0px 0px 40px 0px;
+}
+
+.right-over {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+}
+
+.over-01,
+.over-02 {
+    flex: 1;
+}
+
+.over-02 select {
+    font-family: "Cormorant Garamond", sans-serif;
+    width: 350px;
+    /* rộng bằng container */
+    height: 50px;
+    /* cao giống input */
+    margin: 5px;
+    font-size: 20px;
+    /* chữ to hơn */
+    padding: 10px;
+    /* khoảng cách trong ô */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center
+}
+
+.film {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.right-under {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    color: black;
+}

@@ -1,0 +1,694 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-start;
+    /* keep left alignment */
+    justify-content: flex-start;
+    /* we’ll position manually instead of flex-end */
+    color: white;
+    font-family: 'Georgia', serif;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* 👇 Here's the magic */
+.hero-content {
+    position: absolute;
+    /* allows manual placement */
+    bottom: 20%;
+    /* push content up from bottom */
+    left: 4rem;
+    /* keep left margin */
+    z-index: 2;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: 6rem;
+    line-height: 1.05;
+    font-weight: 400;
+}
+
+.hero-title em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-text {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-content {
+        left: 2rem;
+        bottom: 15%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-content {
+        left: 1.5rem;
+        bottom: 10%;
+    }
+}
+
+
+
+.bookcafe {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--bg);
+    color: var(--text-dark);
+    padding: 4rem 6rem;
+    font-family: "Georgia", serif;
+}
+
+/* LEFT SIDE */
+.bookcafe-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.text-block {
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+}
+
+.heading {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.image-block img {
+    width: 80%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* RIGHT SIDE */
+.bookcafe-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.reading-img {
+    width: 80%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    width: 80%;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .bookcafe {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .bookcafe-left,
+    .bookcafe-right {
+        width: 100%;
+        align-items: center;
+    }
+
+    .image-block img,
+    .reading-img,
+    .description {
+        width: 100%;
+    }
+
+    .description {
+        text-align: center;
+    }
+}
+
+.bestselling {
+    background: var(--bg);
+    text-align: center;
+    padding: 5rem 4rem;
+    font-family: "Georgia", serif;
+    color: var(--text-dark);
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+}
+
+/* --- BOOK GRID --- */
+.book-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.book-card {
+    width: 190px;
+    text-align: left;
+}
+
+.book-image {
+    position: relative;
+    margin-bottom: 0.9rem;
+}
+
+.book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #004b31;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+/* --- TEXT --- */
+.genre {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+}
+
+.book-title {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+.author {
+    color: #a75d44;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+/* --- PRICE --- */
+.price {
+    font-size: 0.9rem;
+}
+
+.price .old {
+    text-decoration: line-through;
+    color: #aaa;
+    margin-right: 0.4rem;
+}
+
+.price .current {
+    font-weight: 500;
+}
+
+/* --- BUTTON --- */
+.view-btn {
+    background: #013b27;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.9rem 2.2rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.view-btn:hover {
+    background: #013b27;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 800px) {
+    .book-grid {
+        justify-content: center;
+    }
+
+    .book-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 500px) {
+    .book-card {
+        width: 100%;
+    }
+}
+
+.light-skin {
+    background-color: #f9f5ef;
+}
+
+.coffee-section {
+    background: var(--cream-bg);
+    padding: 5rem 6rem;
+}
+
+.coffee-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.coffee-left {
+    flex: 1;
+}
+
+.coffee-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid var(--text-dark);
+    border-bottom: 1px solid var(--text-dark);
+    height: 3px;
+    width: 80%;
+    margin: 0.5rem 0 2rem 0;
+}
+
+.coffee-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coffee-item {
+    margin-bottom: 1.8rem;
+}
+
+.coffee-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    position: relative;
+}
+
+.coffee-name {
+    flex-shrink: 0;
+}
+
+.dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted #aaa;
+    margin: 0 10px;
+    height: 1px;
+}
+
+.coffee-price {
+    flex-shrink: 0;
+}
+
+.coffee-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+}
+
+/* --- RIGHT SIDE IMAGE --- */
+.coffee-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.coffee-right img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .coffee-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coffee-left {
+        width: 100%;
+    }
+
+    .coffee-right img {
+        width: 90%;
+        margin-top: 2rem;
+    }
+}
+
+.stories {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f9f5ef;
+    padding: 5rem 8rem;
+    font-family: "Georgia", serif;
+    color: #1e1e1e;
+    gap: 4rem;
+}
+
+/* Image grid layout */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 50%;
+}
+
+.stories-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    aspect-ratio: 4 / 3;
+}
+
+/* Text section */
+.stories-text {
+    width: 45%;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.stories-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.intro {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.stories-list .item {
+    margin-bottom: 1.5rem;
+}
+
+.stories-list h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.stories-list p {
+    color: #777;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .stories {
+        flex-direction: column;
+        padding: 3rem 2rem;
+    }
+
+    .stories-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .stories-text {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+.testimonials {
+    background-color: #ffffff;
+    /* clean white background */
+    padding: 6rem 8rem;
+    text-align: center;
+    color: #222;
+    font-family: "Georgia", serif;
+}
+
+.testimonials-header {
+    margin-bottom: 4rem;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.testimonials-header h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+/* Testimonials grid layout */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Individual cards */
+.testimonial-card {
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 340px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stars {
+    color: #e0a800;
+    /* gold stars */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.text {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.location {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 3rem 2rem;
+    }
+}
+
+.contact-section {
+    background-color: #f9f5ef;
+    padding: 4rem 2rem;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact-subtitle {
+    letter-spacing: 2px;
+    color: #6b5b4a;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.contact-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-top: 0.5rem;
+    font-family: "Georgia", serif;
+}
+
+.contact-desc {
+    color: #5b4e42;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.contact-btn {
+    background-color: #0e3d2f;
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #145c44;
+}
+
+.contact-info p {
+    margin: 0.3rem 0;
+    color: #3a2f28;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Mobile friendly layout */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-info {
+        margin-top: 2rem;
+    }
+}
+
+.footer {
+    background-color: #111;
+    /* clean dark footer */
+    color: #eee;
+    padding: 3rem 2rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section li {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.footer-section ul {
+    padding: 0;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #777;
+}
