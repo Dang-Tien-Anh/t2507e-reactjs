@@ -87,7 +87,6 @@ function HomeTeam() {
     return (
         <>
             <div className="home">
-                {/* Hero Section */}
                 <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
                     <div className="hero-overlay">
                         <div className="hero-content">
