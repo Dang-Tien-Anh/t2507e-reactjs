@@ -14,6 +14,7 @@ import Checkout from './page/Checkout'
 import CategoryTest from './page/Category_Test'
 import HomeTeam from './page/HomeTeam'
 import DetailTeam from './page/DetailTeam'
+import FPT_WEB from '../TEST/website/FPT_Aptech'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +32,7 @@ function App() {
           <Route path='/category_test' Component={CategoryTest} />
           <Route path='/home_team' Component={HomeTeam} />
           <Route path='/detail_team' Component={DetailTeam} />
+          <Route path='/test' Component={FPT_WEB} />
         </Routes>
       </main>
     </>
